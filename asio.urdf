@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="Montagem">
+    <link name="Parte-Central-v10">
+        <inertial>
+            <origin xyz="-1.1374312268591253e-17 1.7061468402886883e-17 8.965081071660529e-08" rpy="0.0 0.0 0.0" />
+            <mass value="3.138446193635996" />
+            <inertia ixx="0.004785506665265726" iyy="0.005508865066852597" izz="0.004518252365516609" ixy="4.283720045350491e-18" iyz="4.283724845837679e-18" ixz="5.711623526809198e-18" />
+        </inertial>
+        <visual name="Parte-Central-v10_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Central-v10.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Parte-Central-v10_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Central-v10.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Bateria-v2">
+        <inertial>
+            <origin xyz="-0.04150000000000005 0.032974999999999983 0.04328428018771682" rpy="0.0 0.0 0.0" />
+            <mass value="2.010476962717196" />
+            <inertia ixx="0.0019164616413558865" iyy="0.002349164303793374" izz="0.0010775980951593335" ixy="7.345625586927895e-19" iyz="6.128232367052389e-19" ixz="3.335338449455067e-18" />
+        </inertial>
+        <visual name="Bateria-v2_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Bateria-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Bateria-v2_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Bateria-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Parte-Posterior-v2_Componente1">
+        <inertial>
+            <origin xyz="-9.444725046697816e-18 0.02565725819562302 -0.013815582811823388" rpy="0.0 0.0 0.0" />
+            <mass value="0.011073166069165289" />
+            <inertia ixx="6.740595550438271e-07" iyy="1.3010467720410944e-06" izz="6.422829411976056e-07" ixy="1.0556697513077311e-22" iyz="5.1724898075800345e-08" ixz="-2.981749282218526e-22" />
+        </inertial>
+        <visual name="Parte-Posterior-v2_Componente1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Posterior-v2_Componente1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Parte-Posterior-v2_Componente1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Posterior-v2_Componente1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Parte-Frontal---Direita-v11">
+        <inertial>
+            <origin xyz="0.04577257225539297 -4.069361637010481e-08 -0.026962757160158154" rpy="0.0 0.0 0.0" />
+            <mass value="0.18166052733738192" />
+            <inertia ixx="8.084859779403965e-05" iyy="0.0001906050775125406" izz="0.00019109851211305553" ixy="-9.198985843710945e-12" iyz="2.1220878818296236e-11" ixz="5.642679454898785e-05" />
+        </inertial>
+        <visual name="Parte-Frontal---Direita-v11_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Frontal---Direita-v11.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Parte-Frontal---Direita-v11_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Frontal---Direita-v11.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Conexão-da-Parte-Frontal-v2">
+        <inertial>
+            <origin xyz="2.729215040631061e-09 4.440892098500626e-18 0.04300000000000055" rpy="0.0 -0.0 0.0" />
+            <mass value="0.01908800280394581" />
+            <inertia ixx="1.1807520402527522e-05" iyy="1.180752039698068e-05" izz="8.589600984437382e-08" ixy="1.3552527156068805e-20" iyz="-1.7430501486772405e-21" ixz="1.2874316557276774e-16" />
+        </inertial>
+        <visual name="Haste---Conexão-da-Parte-Frontal-v2_visual">
+            <origin xyz="2.7289013360132233e-09 4.440892098500626e-18 -8.881784197001253e-18" rpy="3.141592653589793 -0.0 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Haste---Conexão-da-Parte-Frontal-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Conexão-da-Parte-Frontal-v2_collision">
+            <origin xyz="2.7289013360132233e-09 4.440892098500626e-18 -8.881784197001253e-18" rpy="3.141592653589793 -0.0 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Haste---Conexão-da-Parte-Frontal-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Conexão-da-Parte-Frontal-v2">
+        <inertial>
+            <origin xyz="2.729215076158198e-09 -4.440892098500626e-18 0.04300000000000055" rpy="0.0 -0.0 0.0" />
+            <mass value="0.01908800280394581" />
+            <inertia ixx="1.1807520402527522e-05" iyy="1.180752039698068e-05" izz="8.589600984437382e-08" ixy="0.0" iyz="-1.7430501486772405e-21" ixz="1.2874316557276774e-16" />
+        </inertial>
+        <visual name="Haste---Conexão-da-Parte-Frontal-v2_visual">
+            <origin xyz="2.72890137154036e-09 -4.440892098500626e-18 -8.881784197001253e-18" rpy="3.141592653589793 -0.0 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Haste---Conexão-da-Parte-Frontal-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Conexão-da-Parte-Frontal-v2_collision">
+            <origin xyz="2.72890137154036e-09 -4.440892098500626e-18 -8.881784197001253e-18" rpy="3.141592653589793 -0.0 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Haste---Conexão-da-Parte-Frontal-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Parte-Frontal---Esquerda-v2">
+        <inertial>
+            <origin xyz="0.005999999999999632 0.02453004069361637 0.008113017160158123" rpy="0.0 -0.0 0.0" />
+            <mass value="0.36332105467476383" />
+            <inertia ixx="0.0001616971955880793" iyy="0.0011424144044104752" izz="0.0011434012736115042" ixy="1.2494156800137566e-18" iyz="4.2441758171813896e-11" ixz="0.0" />
+        </inertial>
+        <visual name="Parte-Frontal---Esquerda-v2_visual">
+            <origin xyz="0.00599999999999981 0.024530000000000003 -0.018849739999999997" rpy="-3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Frontal---Esquerda-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Parte-Frontal---Esquerda-v2_collision">
+            <origin xyz="0.00599999999999981 0.024530000000000003 -0.018849739999999997" rpy="-3.141592653589793 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Parte-Frontal---Esquerda-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4">
+        <inertial>
+            <origin xyz="5.204170427930421e-18 -1.1275702593849246e-17 -0.06049999999999985" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.282744364391667e-05" iyy="3.282744364391691e-05" izz="1.2085369217148886e-07" ixy="-1.2705494208814505e-21" iyz="2.498747194400186e-20" ixz="-2.202285662861181e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4Espelhar">
+        <inertial>
+            <origin xyz="5.204170427930421e-18 -1.1275702593849246e-17 0.06049999999999985" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.2827443643916724e-05" iyy="3.282744364391691e-05" izz="1.2085369217149172e-07" ixy="1.0587911840678754e-22" iyz="-2.541098841762901e-20" ixz="1.0164395367051604e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4Espelhar_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4Espelhar_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4Espelhar-1">
+        <inertial>
+            <origin xyz="5.204170427930421e-18 -1.1275702593849246e-17 0.06049999999999985" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.2827443643916724e-05" iyy="3.282744364391691e-05" izz="1.2085369217149172e-07" ixy="1.0587911840678754e-22" iyz="-2.541098841762901e-20" ixz="1.0164395367051604e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4Espelhar-1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4Espelhar-1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4EspelharEspelhar">
+        <inertial>
+            <origin xyz="5.204170427930421e-18 -1.1275702593849246e-17 -0.06049999999999985" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.282744364391667e-05" iyy="3.282744364391691e-05" izz="1.2085369217148886e-07" ixy="-1.2705494208814505e-21" iyz="2.498747194400186e-20" ixz="-2.202285662861181e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4EspelharEspelhar_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4EspelharEspelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4EspelharEspelhar_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4EspelharEspelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4Espelhar-2">
+        <inertial>
+            <origin xyz="0.0 -8.673617379884035e-18 0.06049999999999984" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.2827443643916724e-05" iyy="3.282744364391691e-05" izz="1.2085369217149246e-07" ixy="8.470329472543003e-22" iyz="-2.202285662861181e-20" ixz="1.0164395367051604e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4Espelhar-2_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4Espelhar-2_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4EspelharEspelhar-1">
+        <inertial>
+            <origin xyz="0.0 -8.673617379884035e-18 -0.06049999999999984" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.2827443643916724e-05" iyy="3.282744364391686e-05" izz="1.2085369217149257e-07" ixy="1.5881867761018131e-21" iyz="2.456395547037471e-20" ixz="-1.0164395367051604e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4EspelharEspelhar-1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4EspelharEspelhar-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4EspelharEspelhar-1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4EspelharEspelhar-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4Espelhar-1Espelhar">
+        <inertial>
+            <origin xyz="0.0 -8.673617379884035e-18 -0.06049999999999984" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.2827443643916724e-05" iyy="3.282744364391686e-05" izz="1.2085369217149257e-07" ixy="1.5881867761018131e-21" iyz="2.456395547037471e-20" ixz="-1.0164395367051604e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4Espelhar-1Espelhar_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar-1Espelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4Espelhar-1Espelhar_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4Espelhar-1Espelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Haste---Certa-v4EspelharEspelharEspelhar">
+        <inertial>
+            <origin xyz="0.0 -8.673617379884035e-18 0.06049999999999984" rpy="0.0 0.0 0.0" />
+            <mass value="0.026856376038110398" />
+            <inertia ixx="3.2827443643916724e-05" iyy="3.282744364391691e-05" izz="1.2085369217149246e-07" ixy="8.470329472543003e-22" iyz="-2.202285662861181e-20" ixz="1.0164395367051604e-20" />
+        </inertial>
+        <visual name="Haste---Certa-v4EspelharEspelharEspelhar_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4EspelharEspelharEspelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Haste---Certa-v4EspelharEspelharEspelhar_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Haste---Certa-v4EspelharEspelharEspelhar.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Proteção-pCâmera-v2">
+        <inertial>
+            <origin xyz="0.02184982642214269 0.024529999999999986 0.0009999999999998144" rpy="0.0 -0.0 0.0" />
+            <mass value="0.006013592670549185" />
+            <inertia ixx="2.6874675489043048e-06" iyy="1.305713641088337e-06" izz="3.989172128212324e-06" ixy="-4.094082173805945e-21" iyz="-8.649660579200669e-23" ixz="-1.3552527156068805e-20" />
+        </inertial>
+        <visual name="Proteção-pCâmera-v2_visual">
+            <origin xyz="2.7289013360132233e-09 0.049060000000000006 -1.865174681370263e-16" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/Proteção-pCâmera-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Proteção-pCâmera-v2_collision">
+            <origin xyz="2.7289013360132233e-09 0.049060000000000006 -1.865174681370263e-16" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/Proteção-pCâmera-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Proteção-pCâmera-v2">
+        <inertial>
+            <origin xyz="0.02184982642214269 0.024529999999999982 -0.0010000000000000098" rpy="0.0 -0.0 0.0" />
+            <mass value="0.006013592670549185" />
+            <inertia ixx="2.6874675489043065e-06" iyy="1.3057136410882827e-06" izz="3.989172128212324e-06" ixy="-4.5335903778869636e-21" iyz="-9.428361229116777e-23" ixz="2.0258246672498296e-39" />
+        </inertial>
+        <visual name="Proteção-pCâmera-v2_visual">
+            <origin xyz="2.7289013360132233e-09 0.049060000000000006 -0.002000000000000011" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/Proteção-pCâmera-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Proteção-pCâmera-v2_collision">
+            <origin xyz="2.7289013360132233e-09 0.049060000000000006 -0.002000000000000011" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/Proteção-pCâmera-v2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Câmera-Móvel-v1">
+        <inertial>
+            <origin xyz="0.02528501288809647 0.020712529651498317 0.010933306652595542" rpy="0.0 0.0 0.0" />
+            <mass value="0.2928875250357286" />
+            <inertia ixx="3.7491322623170106e-05" iyy="8.090454352624281e-05" izz="9.447916311847993e-05" ixy="-6.423240631136463e-06" iyz="-1.7341197012254803e-07" ixz="-9.696882209834146e-07" />
+        </inertial>
+        <visual name="Câmera-Móvel-v1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Câmera-Móvel-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Câmera-Móvel-v1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Câmera-Móvel-v1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Parte-Frontal---Direita-v11_Rígido-1" type="fixed">
+        <origin xyz="0.006000000000000005 0.02453 -0.018849739999999997" rpy="-0.0 -1.5707963267948966 0" />
+        <parent link="Parte-Frontal---Direita-v11" />
+        <child link="Haste---Conexão-da-Parte-Frontal-v2" />
+    </joint>
+    <joint name="Parte-Frontal---Direita-v11_Rígido-2" type="fixed">
+        <origin xyz="0.006000000000000005 -0.02453 -0.018849739999999997" rpy="-0.0 -1.5707963267948966 0" />
+        <parent link="Parte-Frontal---Direita-v11" />
+        <child link="Haste---Conexão-da-Parte-Frontal-v2" />
+    </joint>
+    <joint name="Haste---Conexão-da-Parte-Frontal-v2_Rígido-3" type="fixed">
+        <origin xyz="0.0 0.0 0.086" rpy="-3.141592653589793 1.5707963267948966 0" />
+        <parent link="Haste---Conexão-da-Parte-Frontal-v2" />
+        <child link="Parte-Frontal---Esquerda-v2" />
+    </joint>
+    <joint name="Parte-Frontal---Esquerda-v2_Rígido-4" type="fixed">
+        <origin xyz="0.005999999999999997 0.0 0.0" rpy="3.5427862169512407e-34 1.5707963267948966 0" />
+        <parent link="Parte-Frontal---Esquerda-v2" />
+        <child link="Proteção-pCâmera-v2" />
+    </joint>
+    <joint name="Parte-Frontal---Direita-v11_Rígido-5" type="fixed">
+        <origin xyz="8.881784197001253e-18 0.02453 -0.018849739999999997" rpy="-3.141592653589793 -1.5707963267948966 0" />
+        <parent link="Parte-Frontal---Direita-v11" />
+        <child link="Proteção-pCâmera-v2" />
+    </joint>
+</robot>

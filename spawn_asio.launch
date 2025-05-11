@@ -1,0 +1,11 @@
+<launch>
+  <!-- Inicia o Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+  <!-- Publica o URDF no parâmetro /robot_description -->
+  <param name="robot_description" textfile="$(find asio)/urdf/asio.urdf" />
+
+  <!-- Spawna o robô -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-param robot_description -urdf -model asio" />
+</launch>
