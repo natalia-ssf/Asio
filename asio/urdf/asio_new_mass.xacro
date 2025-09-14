@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="asio">
+
+  <!-- Include external properties -->
+  <xacro:include filename="$(find asio)/urdf/asio_properties.xacro" />
+  <!-- <xacro:include filename="$(find hector_quadrotor_description)/urdf/quadrotor_hokuyo_utm30lx.urdf.xacro" /> -->
+  <xacro:include filename="$(find hector_quadrotor_gazebo)/urdf/quadrotor_plugins.gazebo.xacro" />
+
+  <!-- Common macros for link geometry -->
+  <xacro:macro name="link_geometry" params="name mesh origin scale">
+    <visual name="${name}_visual">
+      <origin xyz="${origin}" rpy="${originNull}"/>
+      <geometry>
+        <mesh filename="package://asio/meshes/${mesh}.stl" scale="${scale}"/>
+      </geometry>
+    </visual>
+    <collision name="${name}_collision">
+      <origin xyz="${origin}" rpy="${originNull}"/>
+      <geometry>
+        <mesh filename="package://asio/meshes/${mesh}.stl" scale="${scale}"/>
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <!-- Base link -->
+  <link name="base_link"/>
+
+  <!-- Central part link -->
+  <link name="Parte_Central">
+    <inertial>
+      <origin xyz="${originInertial_parteCentral}" rpy="${originNull}"/>
+      <mass value="0.63879"/>
+      <inertia
+        ixx="${inertia_ixx_parteCentral}" ixy="${inertia_ixy_parteCentral}" ixz="${inertia_ixz_parteCentral}"
+        iyy="${inertia_iyy_parteCentral}" iyz="${inertia_iyz_parteCentral}" izz="${inertia_izz_parteCentral}" />
+    </inertial>
+    <xacro:link_geometry name="Parte_Central" mesh="Parte_Central" origin="${originNull}" scale="${scale}"/>
+  </link>
+
+  <!-- Battery link -->
+  <link name="Bateria">
+    <inertial>
+      <origin xyz="${originInertial_Bateria}" rpy="${originNull}"/>
+      <mass value="0.40891"/>
+      <inertia 
+        ixx="${inertia_ixx_Bateria}" 
+        iyy="${inertia_iyy_Bateria}" 
+        izz="${inertia_izz_Bateria}" 
+        ixy="${inertia_ixy_Bateria}" 
+        iyz="${inertia_iyz_Bateria}" 
+        ixz="${inertia_ixz_Bateria}"/>
+    </inertial>
+    <xacro:link_geometry name="Bateria" mesh="Bateria" origin="${originNull}" scale="${scale}"/>
+  </link>
+
+  <!-- Rear part link -->
+  <link name="Parte_Posterior">
+    <inertial>
+      <origin xyz="${originInertial_partePosterior}" rpy="${originNull}"/>
+      <mass value="0.26825"/>
+      <inertia 
+        ixx="${inertia_ixx_partePosterior}" 
+        iyy="${inertia_iyy_partePosterior}" 
+        izz="${inertia_izz_partePosterior}" 
+        ixy="${inertia_ixy_partePosterior}" 
+        iyz="${inertia_iyz_partePosterior}" 
+        ixz="${inertia_ixz_partePosterior}"/>
+    </inertial>
+    <xacro:link_geometry name="Parte_Posterior" mesh="Parte_Posterior" origin="${originNull}" scale="${scale}"/>
+  </link>
+
+  <!-- Front part link -->
+  <link name="Parte_Frontal">
+    <inertial>
+      <origin xyz="${originInertial_parteFrontal}" rpy="0.0 2.7755575615628914e-17 0.0"/>
+      <mass value="0.1058691"/>
+      <inertia 
+        ixx="${inertia_ixx_parteFrontal}" 
+        iyy="${inertia_iyy_parteFrontal}" 
+        izz="${inertia_izz_parteFrontal}" 
+        ixy="${inertia_ixy_parteFrontal}" 
+        iyz="${inertia_iyz_parteFrontal}" 
+        ixz="${inertia_ixz_parteFrontal}"/>
+    </inertial>
+    <visual name="Parte_Frontal_visual">
+      <origin xyz="${originVisual_parteFrontal}" rpy="3.025188689399567 -0.2254090023095731 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://asio/meshes/Parte_Frontal.stl" scale="${scale}"/>
+      </geometry>
+    </visual>
+    <collision name="Parte_Frontal_collision">
+      <origin xyz="${originCollision_parteFrontal}" rpy="3.025188689399567 -0.2254090023095731 3.141592653589793"/>
+      <geometry>
+        <mesh filename="package://asio/meshes/Parte_Frontal.stl" scale="${scale}"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joints -->
+  <joint name="base_to_central" type="fixed">
+    <parent link="base_link"/>
+    <child link="Parte_Central"/>
+    <origin xyz="${originNull}" rpy="-1.570796327 -3.14159265359 -1.570796327"/>
+  </joint>
+
+  <joint name="Parte_Central_to_Bateria" type="fixed">
+    <parent link="Parte_Central"/>
+    <child link="Bateria"/>
+    <origin xyz="-0.04098 -0.0334 0.070" rpy="3.14159265359 0 3.14159265359"/>
+  </joint>
+
+  <joint name="Parte_Central_to_Parte_Frontal" type="fixed">
+    <parent link="Parte_Central"/>
+    <child link="Parte_Frontal"/>
+    <origin xyz="-0.04601171 0.02021968 0.03570749" rpy="3.0221958394403727 0.22385749744281186 3.1149670769656055"/>
+  </joint>
+
+  <joint name="Parte_Central_to_Parte_Posterior" type="fixed">
+    <parent link="Parte_Central"/>
+    <child link="Parte_Posterior"/>
+    <origin xyz="${originNull}" rpy="0 0 3.14159265359"/>
+  </joint>
+
+</robot>

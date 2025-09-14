@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="asio">
+    <link name="base_link" />
+
+    <link name="Parte_Central">
+        <inertial>
+            <origin xyz="-1.1374312268591253e-17 1.7061468402886883e-17 8.965081071660529e-08" rpy="0.0 0.0 0.0" />
+            <mass value="3.138446193635996" />
+            <inertia ixx="0.004785506665265726" iyy="0.005508865066852597" izz="0.004518252365516609" ixy="4.283720045350491e-18" iyz="4.283724845837679e-18" ixz="5.711623526809198e-18" />
+        </inertial>
+        <visual name="Parte_Central_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Parte_Central.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Parte_Central_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Parte_Central.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    
+    <link name="Bateria">
+        <inertial>
+            <origin xyz="-0.04150000000000005 0.032974999999999983 0.04328428018771682" rpy="0.0 0.0 0.0" />
+            <mass value="2.010476962717196" />
+            <inertia ixx="0.0019164616413558865" iyy="0.002349164303793374" izz="0.0010775980951593335" ixy="7.345625586927895e-19" iyz="6.128232367052389e-19" ixz="3.335338449455067e-18" />
+        </inertial>
+        <visual name="Bateria_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Bateria.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Bateria_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Bateria.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Parte_Posterior">
+        <inertial>
+            <origin xyz="-2.7071668186428414e-17 1.9351245627905367e-09 -0.15101119979291508" rpy="0.0 0.0 0.0" />
+            <mass value="1.318635659936295" />
+            <inertia ixx="0.0010531683287138202" iyy="0.002797674984292977" izz="0.0022417941507662563" ixy="-1.0709300804170552e-18" iyz="4.048066801811789e-11" ixz="-3.1766925604898303e-18" />
+        </inertial>
+        <visual name="Parte_Posterior_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Parte_Posterior.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Parte_Posterior_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Parte_Posterior.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Parte_Frontal">
+        <inertial>
+            <origin xyz="-0.07175107287933148 -0.006237280533320282 -0.10689260849430499" rpy="0.0 2.7755575615628914e-17 0.0" />
+            <mass value="0.5204162956573936" />
+            <inertia ixx="0.0009635131587760126" iyy="0.0039137114365482275" izz="0.003227132755260805" ixy="1.4863595410567824e-05" iyz="6.481996071699037e-05" ixz="0.0005478687678166486" />
+        </inertial>
+        <visual name="Parte_Frontal_visual">
+            <origin xyz="-0.03744581163907984 -0.02422996054042262 0.04256357552446358" rpy="3.025188689399567 -0.2254090023095731 3.141592653589793" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Parte_Frontal.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Parte_Frontal_collision">
+            <origin xyz="-0.03744581163907984 -0.02422996054042262 0.04256357552446358" rpy="3.025188689399567 -0.2254090023095731 3.141592653589793" />
+            <geometry>
+                <mesh filename="package://asio/meshes/Parte_Frontal.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="base_to_central" type="fixed">
+        <parent link="base_link" />
+        <child link="Parte_Central" />
+        <origin xyz="0 0 0" rpy="-1.570796327 -3.14159265359 -1.570796327" />
+    </joint>
+
+    <joint name="Parte_Central_E_Bateria" type="fixed">
+        <origin xyz="-0.04098 -0.0334 0.070" rpy="3.14159265359 -0.0 3.14159265359" />
+        <parent link="Parte_Central" />
+        <child link="Bateria" />
+    </joint>
+ 
+    
+    <joint name="Parte_Central_E_Parte_Frontal" type="fixed">
+        <origin xyz="-0.04601171 0.020219680000000004 0.03570749" rpy="3.0221958394403727 0.22385749744281186 3.1149670769656055" />
+        <parent link="Parte_Central" />
+        <child link="Parte_Frontal" />
+    </joint>
+
+    <joint name="Parte_Central_E_Parte_Posterior" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 3.14159265359" />
+        <parent link="Parte_Central" />
+        <child link="Parte_Posterior" />
+    </joint>
+</robot>

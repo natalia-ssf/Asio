@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="asio">
+
+  <!-- Null origin for reuse -->
+  <xacro:property name="originNull" value="0.0 0.0 0.0"/>
+
+  <!-- Mass and inertia grouping per link -->
+  <!-- Parte Central -->
+  <xacro:property name="mass_parteCentral"   value="3.138446193635996"/>
+  <xacro:property name="inertia_ixx_parteCentral" value="0.004785506665265726"/>
+  <xacro:property name="inertia_iyy_parteCentral" value="0.005508865066852597"/>
+  <xacro:property name="inertia_izz_parteCentral" value="0.004518252365516609"/>
+  <xacro:property name="inertia_ixy_parteCentral" value="4.283720045350491e-18"/>
+  <xacro:property name="inertia_iyz_parteCentral" value="4.283724845837679e-18"/>
+  <xacro:property name="inertia_ixz_parteCentral" value="5.711623526809198e-18"/>
+
+  <!-- Bateria -->
+  <xacro:property name="mass_Bateria"   value="2.010476962717196"/>
+  <xacro:property name="inertia_ixx_Bateria" value="0.0019164616413558865"/>
+  <xacro:property name="inertia_iyy_Bateria" value="0.002349164303793374"/>
+  <xacro:property name="inertia_izz_Bateria" value="0.0010775980951593335"/>
+  <xacro:property name="inertia_ixy_Bateria" value="7.345625586927895e-19"/>
+  <xacro:property name="inertia_iyz_Bateria" value="6.128232367052389e-19"/>
+  <xacro:property name="inertia_ixz_Bateria" value="3.335338449455067e-18"/>
+
+  <!-- Parte Posterior -->
+  <xacro:property name="mass_partePosterior"   value="1.318635659936295"/>
+  <xacro:property name="inertia_ixx_partePosterior" value="0.0010531683287138202"/>
+  <xacro:property name="inertia_iyy_partePosterior" value="0.002797674984292977"/>
+  <xacro:property name="inertia_izz_partePosterior" value="0.0022417941507662563"/>
+  <xacro:property name="inertia_ixy_partePosterior" value="-1.0709300804170552e-18"/>
+  <xacro:property name="inertia_iyz_partePosterior" value="4.048066801811789e-11"/>
+  <xacro:property name="inertia_ixz_partePosterior" value="-3.1766925604898303e-18"/>
+  
+  <!-- Parte Frontal -->
+  <xacro:property name="mass_parteFrontal"   value="0.5204162956573936"/>
+  <xacro:property name="inertia_ixx_parteFrontal" value="0.0009635131587760126"/>
+  <xacro:property name="inertia_iyy_parteFrontal" value="0.0039137114365482275"/>
+  <xacro:property name="inertia_izz_parteFrontal" value="0.003227132755260805"/>
+  <xacro:property name="inertia_ixy_parteFrontal" value="1.4863595410567824e-05"/>
+  <xacro:property name="inertia_iyz_parteFrontal" value="6.481996071699037e-05"/>
+  <xacro:property name="inertia_ixz_parteFrontal" value="0.0005478687678166486"/>
+
+  <!-- Origin Inertial -->
+  <xacro:property name="originInertial_parteCentral" value="-1.1374312268591253e-17 1.7061468402886883e-17 8.965081071660529e-08"/>
+  <xacro:property name="originInertial_Bateria" value="-0.04150000000000005 0.032974999999999983 0.04328428018771682"/>
+  <xacro:property name="originInertial_partePosterior" value="-2.7071668186428414e-17 1.9351245627905367e-09 -0.15101119979291508"/>
+  <xacro:property name="originInertial_parteFrontal" value="-0.07175107287933148 -0.006237280533320282 -0.10689260849430499"/>
+
+  <!-- Origin Visual & Collision for frontal -->
+  <xacro:property name="originVisual_parteFrontal" value="-0.03744581163907984 -0.02422996054042262 0.04256357552446358"/>
+  <xacro:property name="originCollision_parteFrontal" value="-0.03744581163907984 -0.02422996054042262 0.04256357552446358"/>
+
+  <!-- Scale -->
+  <xacro:property name="scale" value="0.001 0.001 0.001"/>
+
+  <!-- Macro for inertial -->
+  <xacro:macro name="inertial_props" params="prefix mass ixx iyy izz ixy iyz ixz">
+    <inertial>
+      <origin xyz="${prefix}" rpy="${originNull}"/>
+      <mass value="${mass}"/>
+      <inertia
+        ixx="${ixx}" iyy="${iyy}" izz="${izz}"
+        ixy="${ixy}" iyz="${iyz}" ixz="${ixz}"/>
+    </inertial>
+  </xacro:macro>
+
+</robot>
